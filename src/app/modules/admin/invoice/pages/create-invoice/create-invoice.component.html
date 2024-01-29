@@ -1,0 +1,106 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+  <!-- Header -->
+  <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+    <div class="flex-1 min-w-0">
+        <!-- Title -->
+      <div class="mt-2">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+            Nueva boleta de venta
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="flex-auto p-6 sm:p-10">
+    <div class="w-full">
+      <form class="flex flex-col mt-8 p-8 bg-card rounded-2xl shadow overflow-hidden">
+        <div class="grid grid-rows-1 grid-flow-col gap-1">
+          <div class="grid lg:grid-cols-4 md:grid-cols-2">
+            <div class="pl-1 pr-1">
+              <p class="pb-2 font-medium">Tipo Documento</p>
+              <mat-button-toggle-group value="factura" class="w-full" name="favoriteColor" aria-label="Favorite Color">
+                <mat-button-toggle value="factura" class="w-1/2">Factura</mat-button-toggle>
+                <mat-button-toggle value="boleta" class="w-1/2">Boleta</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+            <div class="pl-1 pr-1">
+              <mat-form-field
+                class="w-full"
+                [subscriptSizing]="'dynamic'">
+                <mat-label>Moneda</mat-label>
+                <mat-select
+                    [value]="'USD'"
+                    >
+                    <mat-option [value]="'USD'">USD - Dolar Americano</mat-option>
+                    <mat-option [value]="'PEN'">PEN - Nuevo Sol Peru</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="pl-1 pr-1">
+              <mat-form-field
+                class="w-full"
+                [subscriptSizing]="'dynamic'">
+                <mat-label>Almacén</mat-label>
+                <mat-select
+                    [value]="'Alm1'"
+                    >
+                    <mat-option [value]="'Alm1'">Almacen 1</mat-option>
+                    <mat-option [value]="'Alm2'">Almacen 2</mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="pl-1 pr-1">
+              <mat-form-field
+                class="w-full"
+                [subscriptSizing]="'dynamic'">
+                <mat-label>Lista precio</mat-label>
+                <mat-select
+                    [value]="'Op1'"
+                    >
+                    <mat-option [value]="'Op1'">Opcion 1</mat-option>
+                    <mat-option [value]="'Op2'">Opcion 2</mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="flex flex-col mt-8 p-8 bg-card rounded-2xl shadow overflow-hidden">
+        <div class="grid grid-rows-1 grid-flow-col gap-1">
+          <div class="grid grid-rows-1 grid-flow-col gap-1">
+            <div class="grid lg:grid-cols-3 md:grid-cols-1 ">
+
+              <div class="flex items-center justify-start w-full">
+                <label for="dropzone-file" class="flex flex-col items-center justify-center w-1/2 h-28 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                        </svg>
+                        <p class="mb-1 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">UTILIZAR MI LOGO</span></p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">PNG, JPG o JPEG (178 x 52 px)</p>
+                    </div>
+                    <input id="dropzone-file" type="file" class="hidden" />
+                </label>
+              </div>
+
+              <div class="flex flex-col justify-center items-center text-center content-center">
+                  <p class="text-3xl font-medium">Nombre empresa</p>
+                  <p>201234567891</p>
+                  <p>empresaruc@ggggg.com</p>
+              </div>
+              <div class="flex lg:justify-end justify-center items-center content-center">
+                <p class="text-3xl font-bold mr-3">No.</p>
+                <p class="text-2xl mr-3">F001-1</p>
+                <button mat-icon-button matTooltip="Primary" color="primary" aria-label="Example icon-button with a heart icon">
+                  <mat-icon>settings</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
